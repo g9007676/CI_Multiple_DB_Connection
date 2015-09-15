@@ -1,6 +1,28 @@
 # CI_Multiple_DB_Connection
 測試  CI Framework 多重 DB 連線作法
 
+## 結論:
+
+$this->load->database('dbA');
+會寫入 $this->db Obj 裡
+
+在第二次載入時，並不會更換 Db Connection
+
+所以不能使用:
+$this->load->database('dbA');
+$this->load->database('dbB');
+做切換DB 的方式
+
+CI 有提供多重且獨立的 Db Connection 宣告方式：
+ $dba = $this->load->database('dbA', true);
+ 
+ $query = $dba->select('*')
+        ->from($this->_table)
+        ->get();
+        
+ return $query->result_array();
+
+
 -- phpMyAdmin SQL Dump
 -- version 4.4.10
 -- http://www.phpmyadmin.net
