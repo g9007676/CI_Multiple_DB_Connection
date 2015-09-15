@@ -19,7 +19,30 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+        echo 'GET A db data <br>';
+        //TODO GET A db data
+        $this->load->model('member');
+        $db1_data = $this->member->get_a_data();
+        echo '<pre>';
+        var_dump($db1_data);
+        echo '================<br>';
+        echo 'GET b db data <br>';
+        $db2_data = $this->member->get_b_data();
+        var_dump($db2_data);
+        echo '</pre>';
+        echo '<br>';
+
+
+
+
+        echo '================<br>';
+        echo 'GET ab db data <br>';
+        echo '<pre>';
+        $db_ab_data = $this->member->get_ab_data();
+        var_dump($db_ab_data);
+        echo '</pre>';
+        exit;
+        //TODO GET B db data
 	}
 }
 
