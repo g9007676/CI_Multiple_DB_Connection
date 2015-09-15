@@ -11,6 +11,7 @@ class Member extends CI_Model
     public function get_a_data()
     {
         $this->load->database('dbA');
+        var_dump('db name :' . $this->db->database);
         $query = $this->db->select('*')
             ->from($this->_table)
             ->get();
@@ -21,6 +22,7 @@ class Member extends CI_Model
     public function get_b_data()
     {
         $this->load->database('dbB');
+        var_dump('db name :' . $this->db->database);
         $query = $this->db->select('*')
             ->from($this->_table)
             ->get();
