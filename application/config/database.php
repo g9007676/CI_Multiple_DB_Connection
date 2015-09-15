@@ -48,22 +48,37 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+$db['dbB']['hostname'] = 'localhost';
+$db['dbB']['username'] = 'root';
+$db['dbB']['password'] = '0000';
+$db['dbB']['database'] = 'multiple_db_B';
+$db['dbB']['dbdriver'] = 'mysql';
+$db['dbB']['dbprefix'] = '';
+$db['dbB']['pconnect'] = TRUE;
+$db['dbB']['db_debug'] = TRUE;
+$db['dbB']['cache_on'] = FALSE;
+$db['dbB']['cachedir'] = '';
+$db['dbB']['char_set'] = 'utf8';
+$db['dbB']['dbcollat'] = 'utf8_general_ci';
+$db['dbB']['swap_pre'] = '';
+$db['dbB']['autoinit'] = TRUE;
+$db['dbB']['stricton'] = FALSE;
 
+$db['dbA']['hostname'] = 'localhost';
+$db['dbA']['username'] = 'root';
+$db['dbA']['password'] = '0000';
+$db['dbA']['database'] = 'multiple_db_A';
+$db['dbA']['dbdriver'] = 'mysql';
+$db['dbA']['dbprefix'] = '';
+$db['dbA']['pconnect'] = TRUE;
+$db['dbA']['db_debug'] = TRUE;
+$db['dbA']['cache_on'] = FALSE;
+$db['dbA']['cachedir'] = '';
+$db['dbA']['char_set'] = 'utf8';
+$db['dbA']['dbcollat'] = 'utf8_general_ci';
+$db['dbA']['swap_pre'] = '';
+$db['dbA']['autoinit'] = TRUE;
+$db['dbA']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
