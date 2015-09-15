@@ -34,22 +34,20 @@ class Member extends CI_Model
     {
         $dba = $this->load->database('dbA', true);
 
-        $dba->select('*')
+        $query = $dba->select('*')
             ->from($this->_table)
-            ->limit($limit)
             ->get();
 
-        $data['dba'] = $dba->result_array();
+        $data['dba'] = $query->result_array();
 
-        $dbb = $this->load->database('dbA', true);
-        $dbb->select('*')
+        $dbb = $this->load->database('dbB', true);
+        $query = $dbb->select('*')
             ->from($this->_table)
-            ->limit($limit)
             ->get();
 
-        $data['dbb'] = $dbb->result_array();
+        $data['dbb'] =  $query->result_array();
 
-        return $data
+        return $data;
     }
 
 }
